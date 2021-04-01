@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">   
+    <title>Assignment - Animacija</title>
+    <style>
+
+        #main {
+            width:500px;
+            height:400px;
+            background-color:#050210;
+            margin: 100px auto;
+            display: flex;
+            justify-content: center;
+            z-index: 1;
+            position:relative;
+        }
+        
+        #cigra {
+            margin-top: 70px;
+            width:260px;
+            height:260px;
+            border-radius:100%;
+            background-color:yellow;
+            z-index:100;
+            position: absolute;
+            animation-name: cigra-animation;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            background-color:rgb(1, 11, 26);
+        }
+
+        #triper {
+
+            margin-top: 50px;
+            width:300px;
+            height:300px;
+            border-radius:100%;
+            background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+            filter:blur(35px);
+            z-index:2;
+            position:absolute;
+            animation-name: my-animation;
+            animation-duration: 1s;
+            animation-iteration-count:infinite;
+            animation-timing-function:linear;         
+        }
+
+        #krug {
+
+            margin-top: 50px;
+            width:300px;
+            height:300px;
+            border-radius:100%;
+            background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+            z-index:3;
+            animation-timing-function:linear;
+            animation-name: my-animation;
+            animation-duration: 1s;
+            animation-iteration-count:infinite;       
+        }
+
+        #krug2 {
+            margin:20px;
+            width:260px;
+            height:260px;
+            border-radius:100%;
+            background-color:black;
+            z-index:4;        
+        } 
+
+        @keyframes my-animation {
+            from {
+                transform:rotate(0deg);
+                    }
+
+             to {
+                transform:rotate(360deg);
+                    }
+            }
+
+        @keyframes cigra-animation {
+            from {
+                transform: scale(0);
+                
+                    }
+
+             to {
+                 transform: scale(1);
+                
+                    }
+            }
+
+    </style>
+       
+</head>
+<body>
+    
+    <div id="main">    
+        <div id="krug">
+            <div id="krug2"></div>
+        </div>
+        <div id="triper"></div>
+        <div id="cigra"></div>
+    </div>
+
+</body>
+</html>
